@@ -9,7 +9,7 @@
 </tr>
 <tr>
 <td>
-<a href="#13.11.0">13.11.0</a><br/>
+<a href="#13.12.0">13.12.0</a><br/>
 <a href="#13.10.1">13.10.1</a><br/>
 <a href="#13.10.0">13.10.0</a><br/>
 <a href="#13.9.0">13.9.0</a><br/>
@@ -41,6 +41,76 @@
   * [0.10.x](CHANGELOG_V010.md)
   * [io.js](CHANGELOG_IOJS.md)
   * [Archive](CHANGELOG_ARCHIVE.md)
+
+<a id="13.12.0"></a>
+## 2020-03-24, Version 13.12.0 (Current), @mylesborins
+
+### Notable Changes
+
+* [[`a44da56254`](https://github.com/nodejs/node/commit/a44da56254)] - **(SEMVER-MINOR)** **doc**: update stability of report features (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`306ed96c30`](https://github.com/nodejs/node/commit/306ed96c30)] - **(SEMVER-MINOR)** **doc,lib,src,test**: make --experimental-report a nop (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`ea7f89da96`](https://github.com/nodejs/node/commit/ea7f89da96)] - **(SEMVER-MINOR)** **test**: remove common.skipIfReportDisabled() (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`3f1f5189e5`](https://github.com/nodejs/node/commit/3f1f5189e5)] - **(SEMVER-MINOR)** **build**: make --without-report a no-op (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`36ab39fc82`](https://github.com/nodejs/node/commit/36ab39fc82)] - **(SEMVER-MINOR)** **build**: remove node\_report option in node.gyp (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`514b7c2744`](https://github.com/nodejs/node/commit/514b7c2744)] - **(SEMVER-MINOR)** **src**: unconditionally include report feature (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`435fbbccb4`](https://github.com/nodejs/node/commit/435fbbccb4)] - **(SEMVER-MINOR)** **worker**: allow URL in Worker constructor (Antoine du HAMEL) [#31664](https://github.com/nodejs/node/pull/31664)
+* [[`975d6b0144`](https://github.com/nodejs/node/commit/975d6b0144)] - **(SEMVER-MINOR)** **util**: use a global symbol for `util.promisify.custom` (ExE Boss) [#31672](https://github.com/nodejs/node/pull/31672)
+
+### Commits
+
+* [[`3f1f5189e5`](https://github.com/nodejs/node/commit/3f1f5189e5)] - **(SEMVER-MINOR)** **build**: make --without-report a no-op (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`36ab39fc82`](https://github.com/nodejs/node/commit/36ab39fc82)] - **(SEMVER-MINOR)** **build**: remove node\_report option in node.gyp (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`2428afb9f4`](https://github.com/nodejs/node/commit/2428afb9f4)] - **build**: disable libstdc++ debug containers globally (Ben Noordhuis) [#30147](https://github.com/nodejs/node/pull/30147)
+* [[`dc5d4457bb`](https://github.com/nodejs/node/commit/dc5d4457bb)] - **build**: macOS package notarization (Rod Vagg) [#31459](https://github.com/nodejs/node/pull/31459)
+* [[`5366682875`](https://github.com/nodejs/node/commit/5366682875)] - **deps**: update npm to 6.14.3 (Myles Borins) [#32368](https://github.com/nodejs/node/pull/32368)
+* [[`094aa0fb8b`](https://github.com/nodejs/node/commit/094aa0fb8b)] - **deps**: update to uvwasi 0.0.6 (Colin Ihrig) [#32309](https://github.com/nodejs/node/pull/32309)
+* [[`c906c40263`](https://github.com/nodejs/node/commit/c906c40263)] - **deps**: upgrade to libuv 1.35.0 (Colin Ihrig) [#32204](https://github.com/nodejs/node/pull/32204)
+* [[`612ee7dafc`](https://github.com/nodejs/node/commit/612ee7dafc)] - **deps**: V8: cherry-pick f9257802c1c0 (Matheus Marchini) [#32180](https://github.com/nodejs/node/pull/32180)
+* [[`0594de46eb`](https://github.com/nodejs/node/commit/0594de46eb)] - **deps**: upgrade npm to 6.14.1 (Isaac Z. Schlueter) [#31977](https://github.com/nodejs/node/pull/31977)
+* [[`8c6f80f65f`](https://github.com/nodejs/node/commit/8c6f80f65f)] - **deps**: update term-size with signed version (Rod Vagg) [#31459](https://github.com/nodejs/node/pull/31459)
+* [[`7c8ebd0ed2`](https://github.com/nodejs/node/commit/7c8ebd0ed2)] - **deps,doc**: move openssl maintenance guide to doc (Sam Roberts) [#32209](https://github.com/nodejs/node/pull/32209)
+* [[`c3e2eeacd3`](https://github.com/nodejs/node/commit/c3e2eeacd3)] - **doc**: fix some 404 links (Thomas Watson Steen) [#32200](https://github.com/nodejs/node/pull/32200)
+* [[`f540d6d26e`](https://github.com/nodejs/node/commit/f540d6d26e)] - **doc**: complete n-api version matrix (Gabriel Schulhof) [#32304](https://github.com/nodejs/node/pull/32304)
+* [[`a44da56254`](https://github.com/nodejs/node/commit/a44da56254)] - **(SEMVER-MINOR)** **doc**: update stability of report features (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`ce58e021db`](https://github.com/nodejs/node/commit/ce58e021db)] - **doc**: update conditional exports recommendations (Guy Bedford) [#32098](https://github.com/nodejs/node/pull/32098)
+* [[`038a46398d`](https://github.com/nodejs/node/commit/038a46398d)] - **doc**: expand fs.watch caveats (Bartosz Sosnowski) [#32176](https://github.com/nodejs/node/pull/32176)
+* [[`c5a3bfdcff`](https://github.com/nodejs/node/commit/c5a3bfdcff)] - **doc**: add Ruben to TSC (Michael Dawson) [#32213](https://github.com/nodejs/node/pull/32213)
+* [[`95cfd4f7a0`](https://github.com/nodejs/node/commit/95cfd4f7a0)] - **doc**: official macOS builds now on 10.15 + Xcode 11 (Rod Vagg) [#31459](https://github.com/nodejs/node/pull/31459)
+* [[`c72a678d0c`](https://github.com/nodejs/node/commit/c72a678d0c)] - **doc**: add missing link for v13.11.0 changelog (Myles Borins) [#32218](https://github.com/nodejs/node/pull/32218)
+* [[`306ed96c30`](https://github.com/nodejs/node/commit/306ed96c30)] - **(SEMVER-MINOR)** **doc,lib,src,test**: make --experimental-report a nop (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`e60efa76b2`](https://github.com/nodejs/node/commit/e60efa76b2)] - **errors**: drop pronouns from ERR\_WORKER\_PATH message (Colin Ihrig) [#32285](https://github.com/nodejs/node/pull/32285)
+* [[`d2857c7d56`](https://github.com/nodejs/node/commit/d2857c7d56)] - **esm**: port loader code to JS (Anna Henningsen) [#32201](https://github.com/nodejs/node/pull/32201)
+* [[`720a2e210d`](https://github.com/nodejs/node/commit/720a2e210d)] - **http**: don't emit 'finish' after 'error' (Robert Nagy) [#32276](https://github.com/nodejs/node/pull/32276)
+* [[`32dbc7aeb1`](https://github.com/nodejs/node/commit/32dbc7aeb1)] - **http2**: rename counter in `mapToHeaders` inner loop (Mateusz Krawczuk) [#32012](https://github.com/nodejs/node/pull/32012)
+* [[`7a2400d50b`](https://github.com/nodejs/node/commit/7a2400d50b)] - **lib**: add option to disable \_\_proto\_\_ (Gus Caplan) [#32279](https://github.com/nodejs/node/pull/32279)
+* [[`2232399ef0`](https://github.com/nodejs/node/commit/2232399ef0)] - **lib**: use spread operator on cluster (himself65) [#32125](https://github.com/nodejs/node/pull/32125)
+* [[`055b3b9cc1`](https://github.com/nodejs/node/commit/055b3b9cc1)] - **lib**: change var to let/const (himself65) [#32037](https://github.com/nodejs/node/pull/32037)
+* [[`5b9ce00500`](https://github.com/nodejs/node/commit/5b9ce00500)] - **meta**: move inactive collaborators to emeriti (Rich Trott) [#32151](https://github.com/nodejs/node/pull/32151)
+* [[`e971f72dc2`](https://github.com/nodejs/node/commit/e971f72dc2)] - **n-api**: fix comment on expected N-API version (Michael Dawson) [#32236](https://github.com/nodejs/node/pull/32236)
+* [[`969b0b74e0`](https://github.com/nodejs/node/commit/969b0b74e0)] - **repl**: align preview with the actual executed code (Ruben Bridgewater) [#32154](https://github.com/nodejs/node/pull/32154)
+* [[`39dae8e54f`](https://github.com/nodejs/node/commit/39dae8e54f)] - **src**: clean up stream\_base.h and stream-base-inl.h (James M Snell) [#32307](https://github.com/nodejs/node/pull/32307)
+* [[`aa2dbd2f64`](https://github.com/nodejs/node/commit/aa2dbd2f64)] - **src**: handle NULL env scenario (himself65) [#32230](https://github.com/nodejs/node/pull/32230)
+* [[`514b7c2744`](https://github.com/nodejs/node/commit/514b7c2744)] - **(SEMVER-MINOR)** **src**: unconditionally include report feature (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`63bf0f134c`](https://github.com/nodejs/node/commit/63bf0f134c)] - **src**: find .text section using dl\_iterate\_phdr (Gabriel Schulhof) [#32244](https://github.com/nodejs/node/pull/32244)
+* [[`3c0ce6935e`](https://github.com/nodejs/node/commit/3c0ce6935e)] - **src**: fix warn\_unused\_result compiler warning (Colin Ihrig) [#32241](https://github.com/nodejs/node/pull/32241)
+* [[`04f2caaac3`](https://github.com/nodejs/node/commit/04f2caaac3)] - **src**: refactor to more safe method (gengjiawen) [#32087](https://github.com/nodejs/node/pull/32087)
+* [[`3971117ba2`](https://github.com/nodejs/node/commit/3971117ba2)] - **src,cli**: support compact (one-line) JSON reports (Sam Roberts) [#32254](https://github.com/nodejs/node/pull/32254)
+* [[`7d1e170cca`](https://github.com/nodejs/node/commit/7d1e170cca)] - **test**: use Promise.all() in test-hash-seed (Rich Trott) [#32273](https://github.com/nodejs/node/pull/32273)
+* [[`ea7f89da96`](https://github.com/nodejs/node/commit/ea7f89da96)] - **(SEMVER-MINOR)** **test**: remove common.skipIfReportDisabled() (Colin Ihrig) [#32242](https://github.com/nodejs/node/pull/32242)
+* [[`70fe3befa1`](https://github.com/nodejs/node/commit/70fe3befa1)] - **test**: workaround for V8 8.1 inspector pause issue (Matheus Marchini) [#32234](https://github.com/nodejs/node/pull/32234)
+* [[`0a2238481f`](https://github.com/nodejs/node/commit/0a2238481f)] - **test**: make test-memory-usage predictable (Matheus Marchini) [#32239](https://github.com/nodejs/node/pull/32239)
+* [[`3649a7e9ff`](https://github.com/nodejs/node/commit/3649a7e9ff)] - **test**: verify that WASI errors are rethrown (Colin Ihrig) [#32157](https://github.com/nodejs/node/pull/32157)
+* [[`fc2909a96a`](https://github.com/nodejs/node/commit/fc2909a96a)] - **test**: add new scenario for async-local storage (Harshitha KP) [#32082](https://github.com/nodejs/node/pull/32082)
+* [[`45513c0f09`](https://github.com/nodejs/node/commit/45513c0f09)] - **test**: use portable EOL (Harshitha KP) [#32104](https://github.com/nodejs/node/pull/32104)
+* [[`4d744c35d5`](https://github.com/nodejs/node/commit/4d744c35d5)] - **test**: refactor and simplify test-repl-preview (Ruben Bridgewater) [#32154](https://github.com/nodejs/node/pull/32154)
+* [[`0dd6e4a7a6`](https://github.com/nodejs/node/commit/0dd6e4a7a6)] - **test**: `buffer.write` with longer string scenario (Harshitha KP) [#32123](https://github.com/nodejs/node/pull/32123)
+* [[`6e1f0fe879`](https://github.com/nodejs/node/commit/6e1f0fe879)] - **test**: fix test-tls-env-extra-ca-file-load (Eric Bickle) [#32073](https://github.com/nodejs/node/pull/32073)
+* [[`a7dabc5b3e`](https://github.com/nodejs/node/commit/a7dabc5b3e)] - **tools**: fixup icutrim.py use of string and bytes objects (Jonathan MERCIER) [#31659](https://github.com/nodejs/node/pull/31659)
+* [[`1e58c8bdef`](https://github.com/nodejs/node/commit/1e58c8bdef)] - **tools**: update minimist@1.2.5 (Rich Trott) [#32274](https://github.com/nodejs/node/pull/32274)
+* [[`04843b907f`](https://github.com/nodejs/node/commit/04843b907f)] - **tools**: update to acorn@7.1.1 (Rich Trott) [#32259](https://github.com/nodejs/node/pull/32259)
+* [[`3845754734`](https://github.com/nodejs/node/commit/3845754734)] - **util**: text decoding allows SharedArrayBuffer (Bradley Farias) [#32203](https://github.com/nodejs/node/pull/32203)
+* [[`975d6b0144`](https://github.com/nodejs/node/commit/975d6b0144)] - **(SEMVER-MINOR)** **util**: use a global symbol for `util.promisify.custom` (ExE Boss) [#31672](https://github.com/nodejs/node/pull/31672)
+* [[`435fbbccb4`](https://github.com/nodejs/node/commit/435fbbccb4)] - **(SEMVER-MINOR)** **worker**: allow URL in Worker constructor (Antoine du HAMEL) [#31664](https://github.com/nodejs/node/pull/31664)
 
 <a id="13.11.0"></a>
 ## 2020-03-11, Version 13.11.0 (Current), @MylesBorins
